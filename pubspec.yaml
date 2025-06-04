@@ -107,16 +107,8 @@ flutter:
     - assets/data/similar_ayah/
     - assets/data/mutashabihat/
 
-    # App icons and images
-#    - assets/images/
-#    - assets/icons/
-
   # Custom Fonts
   fonts:
-    - family: UthmaniHafs
-      fonts:
-        - asset: assets/data/fonts/UthmaniHafs_V22.ttf
-          weight: 400
 
     - family: QCF_SurahHeader
       fonts:
