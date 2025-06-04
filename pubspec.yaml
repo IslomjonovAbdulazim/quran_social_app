@@ -1,0 +1,138 @@
+name: quran_social_app
+description: "A comprehensive Quran app with social features."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Icons
+  cupertino_icons: ^1.0.8
+  flutter_screenutil: ^5.9.3      # Responsive design
+  flutter_svg: ^2.0.10            # SVG support for icons
+
+  # Database & Storage
+  sqflite: ^2.4.2                 # SQLite database - LATEST
+  path: ^1.9.1                    # File path utilities
+  path_provider: ^2.1.5           # Get app directories - LATEST
+  shared_preferences: ^2.5.3      # Store user preferences - LATEST
+  hive: ^2.2.3                    # Fast key-value storage
+
+  # GetX State Management (Your Choice)
+  get: ^4.7.2                     # GetX - LATEST version from Feb 2025
+  get_storage: ^2.1.1             # GetX storage solution
+
+  # Audio & Background Play
+  just_audio: ^0.9.40             # Advanced audio player - LATEST
+  just_audio_background: ^0.0.1-beta.17  # Background audio - LATEST
+  audio_service: ^0.18.18         # Background audio service - LATEST
+  audio_session: ^0.2.2          # Audio session management - LATEST
+
+  # HTTP & Downloads
+  dio: ^5.8.0+1                    # HTTP client for downloads - LATEST
+  flutter_downloader: ^1.12.0     # File downloader - LATEST
+  permission_handler: ^12.0.0+1     # File permissions - LATEST
+
+  # UI Components & Animations
+  scroll_to_index: ^3.0.1         # Scroll to specific ayah
+  flutter_spinkit: ^5.2.1         # Loading animations - LATEST
+  shimmer: ^3.0.0                 # Shimmer loading effect
+  cached_network_image: ^3.4.1    # Cache images - LATEST
+  smooth_page_indicator: ^1.2.1 # Page indicators - LATEST
+  flutter_staggered_animations: ^1.1.1  # Smooth animations
+
+  # Arabic/RTL Text Support
+  bidi: ^2.0.13                  # Bidirectional text
+  intl: ^0.19.0                  # Internationalization - LATEST
+
+  # Social Features
+  share_plus: ^11.0.0             # Share ayahs/content - LATEST
+  url_launcher: ^6.3.1            # Open external links - LATEST
+
+  # Search & Indexing
+  diacritic: ^0.1.6              # Remove diacritics for search - LATEST
+  string_similarity: ^2.1.1       # Text similarity search
+
+  # Device Features
+  vibration: ^3.1.3               # Haptic feedback - LATEST
+  wakelock_plus: ^1.3.2           # Keep screen awake - LATEST
+
+  # Utilities
+  connectivity_plus: ^6.1.4       # Network connectivity - LATEST
+  device_info_plus: ^11.4.0       # Device information - LATEST
+  package_info_plus: ^8.3.0       # App version info - LATEST
+  flutter_launcher_icons: ^0.14.3 # App icons - LATEST
+
+  # Optional: Analytics & Crash Reporting
+  # firebase_core: ^3.6.0
+  # firebase_analytics: ^11.3.3
+  # firebase_crashlytics: ^4.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  hive_generator: ^2.0.1          # Code generation for Hive
+  build_runner: ^2.4.15           # Build system - LATEST
+
+flutter:
+  uses-material-design: true
+
+  # Assets
+  assets:
+    # Core Quran data
+    - assets/data/mushaf/
+    - assets/data/script/
+    - assets/data/meta/
+    - assets/data/surah_info/
+
+    # Fonts
+    - assets/data/fonts/
+
+    # Audio (if storing locally)
+    - assets/data/audio/
+
+    # Optional features
+    - assets/data/translation/
+    - assets/data/transliteration/
+    - assets/data/tafsirs/
+    - assets/data/similar_ayah/
+    - assets/data/mutashabihat/
+
+    # App icons and images
+#    - assets/images/
+#    - assets/icons/
+
+  # Custom Fonts
+  fonts:
+    - family: UthmaniHafs
+      fonts:
+        - asset: assets/data/fonts/UthmaniHafs_V22.ttf
+          weight: 400
+
+    - family: QCF_SurahHeader
+      fonts:
+        - asset: assets/data/fonts/QCF_SurahHeader_COLOR-Regular.ttf
+          weight: 400
+
+    - family: SurahName
+      fonts:
+        - asset: assets/data/fonts/surah-name-v2.ttf
+          weight: 400
+        - asset: assets/data/fonts/surah_names.ttf
+          weight: 300
+
+# Platform-specific configurations
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png"
