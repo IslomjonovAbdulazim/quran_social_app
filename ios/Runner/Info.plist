@@ -2,6 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <true/>
+            <!-- Or for better security, specify your domains -->
+            <key>NSExceptionDomains</key>
+            <dict>
+                <key>download.quranicaudio.com</key>
+                <dict>
+                    <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                    <true/>
+                    <key>NSExceptionMinimumTLSVersion</key>
+                    <string>TLSv1.0</string>
+                </dict>
+            </dict>
+        </dict>
+
+        <!-- Optional: For accessing WiFi information -->
+        <key>NSLocalNetworkUsageDescription</key>
+        <string>This app needs to access local network to download Quran audio files efficiently.</string>
+
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

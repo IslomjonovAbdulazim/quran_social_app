@@ -29,7 +29,7 @@ dependencies:
   get_storage: ^2.1.1             # GetX storage solution
 
   # Audio & Background Play
-  just_audio: ^0.9.40             # Advanced audio player - LATEST
+  just_audio: ^0.10.3             # Advanced audio player - LATEST
   just_audio_background: ^0.0.1-beta.17  # Background audio - LATEST
   audio_service: ^0.18.18         # Background audio service - LATEST
   audio_session: ^0.2.2          # Audio session management - LATEST
