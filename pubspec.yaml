@@ -23,6 +23,7 @@ dependencies:
   path_provider: ^2.1.5           # Get app directories - LATEST
   shared_preferences: ^2.5.3      # Store user preferences - LATEST
   hive: ^2.2.3                    # Fast key-value storage
+  hive_flutter:
 
   # GetX State Management (Your Choice)
   get: ^4.7.2                     # GetX - LATEST version from Feb 2025
